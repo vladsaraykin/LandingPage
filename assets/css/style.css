@@ -1,0 +1,30 @@
+body {
+    width: 100%;
+}
+header {
+    background-color: #0a141e;
+}
+ul.header-links{
+    margin: 0;
+    padding: 4px;
+}
+ul.header-links li {
+    display: inline;
+    margin-right: 5px;
+    padding: 3px;
+}
+ul.header-links li a {
+    text-decoration: none;
+    color: white;
+}
+footer {
+    background-color: #414042;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+footer p {
+    background: #414042;
+    color: #e9e5dc;
+}
