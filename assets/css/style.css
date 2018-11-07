@@ -42,7 +42,15 @@ body {
 .main-menu a{
     display: block;
     padding: 41px 16px;
-
+    color: rgb(255, 255, 255);
+    font-family: "Droid Sans", serif;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.main-menu a:hover{
+    color: rgb(75, 202, 255);
 }
 .home-first_screen{
     height: 100vh;
@@ -50,6 +58,108 @@ body {
     margin-top: -100px;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.home-content{
+    width: 1339px;
+    height: 336px;
+    margin: 0 auto;
+    padding: 349px 162px 115px 653px;
+}
+.home-content-text{
+    width: 665px;
+    height: 129px;
+}
+.home-content-text .context-head-usual{
+    width: 625px;
+    height: 45px;
+    text-shadow: 0 1px 3px rgba(25, 22, 24, 0.36);
+    color: #ffffff;
+    font-size: 48px;
+    font-family: "Lato Light", serif;
+    font-weight: 300;
+}
+.home-content-text .context_head-highlighted{
+    font-family: "Lato - Bold", serif;
+    font-weight: 700;
+}
+.home-content-text .context-description{
+    display: flex;
+    width: 665px;
+    height: 60px;
+    color: #ffffff;
+    font-family: Lato, 'serif';
+    font-size: 18px;
+    font-weight: 300;
+}
+button,
+button:active,
+button:focus {
+    outline: none;
+}
+.home-content-button{
+    width: 431px;
+    height: 65px;
+    margin-top: 40px;
+}
+.btn-download{
+    display: inline-block;
+    width: 196px;
+    height: 65px;
+    border: 0;
+    background: url("../img/Base.png");
+}
+.btn-download span {
+    width: 90px;
+    height: 11px;
+    color: #ffffff;
+    font-family: Lato, 'serif';
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.btn-learn-more{
+    width: 196px;
+    height: 61px;
+    border: 0;
+    box-shadow: 0 4px 0 #277697;
+    background: url("../img/blueBase.png");
+}
+.btn-learn-more span{
+    width: 94px;
+    height: 11px;
+    color: #fefefe;
+    font-family: Lato, 'serif';
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.container-link{
+    width: 1339px;
+    height: 55px;
+}
+.home-content-available{
+    display: flex;
+    margin-top: 49px;
+    width: 251px;
+    height: 53px;
+}
+.home-content-available span{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 109px;
+    height: 13px;
+    color: #ffffff;
+    font-family: Lato, 'serif';
+    font-size: 18px;
+    font-weight: 300;
+}
+.apple-icon{
+    width: 53px;
+    height: 53px;
+}
+.android-icon{
+    width: 54px;
+    height: 53px;
 }
 .footer {
     background-color: #414042;
