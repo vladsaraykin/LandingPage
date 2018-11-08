@@ -15,8 +15,10 @@ body {
     margin:0 auto;
 }
 .site-header{
-    background-color: rgba(11,64,89, 0.3);
-    p-index:0;
+    height: 100px;
+    background-color: rgba(7, 7, 7, 0.3);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+    z-index: 10;
     position: relative;
 
 }
@@ -161,14 +163,199 @@ button:focus {
     width: 54px;
     height: 53px;
 }
-.footer {
-    background-color: #414042;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    position: relative;
-    overflow: hidden;
+.home-sections__features{
+    height: 100vh;
+    background: rgb(255, 255, 255);
+    background-size: cover;
 }
-footer p {
-    background: #414042;
-    color: #e9e5dc;
+
+.img-features{
+    display: flex;
+    width: 170px;
+    height: 170px;
+}
+
+.feature-heading__span{
+    color: rgb(65, 64, 66);
+    font-family: Lato, 'serif';
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.feature-content__span{
+    color: rgb(65, 64, 66);
+    font-family: Lato, 'serif';
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.heading-content{
+    display: flex;
+    flex-direction: column
+}
+
+.features-row{
+    display: flex;
+    align-items: center;
+}
+
+.features-content{
+    flex-direction: column;
+    align-items: center;
+    text-align:center;
+    width: 219px;
+    height: 316px;
+}
+
+.feature-title{
+    display: flex;
+    padding-top: 30px;
+    color: rgb(65, 64, 66);
+    font-family: Lato, 'serif';
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.feature-text{
+    padding-top: 27px;
+    display: flex;
+    color: rgb(131, 131, 131);
+    font-family: Lato, 'serif';
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 22px;
+}
+.video{
+    display: flex;
+    width: 1480px;
+    height: 550px;
+    background: url("../img/image-video.png");
+}
+.btn-play-video{
+    display: flex;
+    width: 116px;
+    height: 75px;
+    background: url("../img/btn-play.png");
+}
+.video-content-text {
+    display: flex;
+    flex-direction: column;
+}
+.video-content-text .tittle{
+    width: 747px;
+    height: 45px;
+    text-shadow: 0 1px 3px rgba(25, 22, 24, 0.36);
+    color: #ffffff;
+    font-size: 48px;
+    /* Text style for "Watch the" */
+    font-family: "Lato Light", 'serif';
+    font-weight: 300;
+}
+.video-content-text .tittle span{
+    font-family: "Lato - Bold", 'serif';
+    font-weight: 700;
+}
+.video-content-text .description{
+    width: 665px;
+    height: 60px;
+    color: #ffffff;
+    font-family: Lato, 'serif';
+    font-size: 18px;
+    font-weight: 300;
+}
+.testimonials{
+    display: flex;
+    width: 1480px;
+    height: 381px;
+    background-color: #f9f9f9;
+}
+.testimonials-quote{
+    display: flex;
+    width: 513px;
+    height: 159px;
+}
+.testimonials-content-tittle{
+    display: flex;
+    color: #414042;
+    font-family: "Lato - Black", serif;
+    font-size: 36px;
+    font-weight: 400;
+}
+.testimonials-icon{
+    width: 141px;
+    height: 159px;
+}
+.testimonials-quote__content{
+    color: #4bcaff;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: "Lato - Bold", serif;
+    font-weight: 700;
+    letter-spacing: -0.14px;
+}
+.testimonials-quote__content span{
+    float: right;
+    text-align: right;
+    font-family: "Lato - Bold Italic", serif;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -0.14px;
+}
+.show-gallery{
+    width: 1170px;
+    height: 416px;
+    background: #ffffff;
+}
+.show-gallery-tittle{
+    display: flex;
+    flex-direction: column;
+    width: 353px;
+    height: 56px;
+}
+.show-gallery-tittle__head{
+    color: #414042;
+    font-family: "Lato - Black", 'serif';
+    font-size: 36px;
+    font-weight: 400;
+}
+.show-gallery-tittle__content{
+    color: #414042;
+    font-family: Lato, 'serif';
+    font-size: 20px;
+    font-weight: 300;
+}
+.items-of-gallery{
+    display: flex;
+    flex-direction: row;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    height: 302px;
+}
+
+.footer {
+    width: 1480px;
+    height: 110px;
+    background-color: #414042;
+    padding-top: 50px;
+    padding-bottom: 49px;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-content span{
+    opacity: 0.25;
+    color: #ffffff;
+    font-family: Lato, 'serif';
+    font-size: 12px;
+    font-weight: 400;
+}
+.upper-case{
+    text-transform: uppercase;
 }
