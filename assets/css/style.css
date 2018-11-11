@@ -208,22 +208,28 @@ button:focus {
 }
 
 .home-content-button {
+    display: flex;
+    justify-content: space-between;
     width: 431px;
     height: 65px;
     margin-top: 40px;
 }
 
-.btn-download {
+.home-content .btn-download {
     display: inline-block;
-    width: 196px;
-    height: 65px;
-    border: 0;
-    background-image: url("../img/Base.png");
+    border: 2px solid #ffffff;
+    background-image: none;
+    background-color: transparent;
+    border-radius: 5px;
+    color: #ffffff;
+    font-family: Lato, 'serif';
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
-.btn-download span {
-    width: 90px;
-    height: 11px;
+.home-content .btn-download span {
     color: #ffffff;
     font-family: Lato, 'serif';
     font-size: 15px;
@@ -231,17 +237,16 @@ button:focus {
     text-transform: uppercase;
 }
 
-.btn-learn-more {
+.home-content .btn-learn-more {
     width: 196px;
     height: 61px;
-    border: 0;
     box-shadow: 0 4px 0 #277697;
+    border: 0;
+    border-radius: 5px;
     background: url("../img/blueBase.png");
 }
 
-.btn-learn-more span {
-    width: 94px;
-    height: 11px;
+.home-content .btn-learn-more span {
     color: #fefefe;
     font-family: Lato, 'serif';
     font-size: 15px;
@@ -311,17 +316,17 @@ button:focus {
 
 .heading-content {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    align-items: center;
+    margin-top: 49px;
+    margin-bottom: 30px;
 }
 
 .features {
-    /*display: flex;*/
-    /*align-items: center;*/
+
 }
 
 .features-content {
-    /*flex-direction: column;*/
-    align-items: center;
     text-align:center;
     width: 219px;
     height: 316px;
@@ -541,7 +546,6 @@ button:focus {
 .btn-download {
     width: 196px;
     height: 61px;
-    box-shadow: 0 4px 0 #277697;
     background-color: #4bcaff;
     border-radius: 5px;
     text-align: center;
