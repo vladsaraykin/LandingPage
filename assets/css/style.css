@@ -209,6 +209,7 @@ button:focus {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    align-items: center;
 }
 .img-features {
     display: flex;
@@ -329,7 +330,7 @@ button:focus {
     height: 455px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 .item-price{
     display: flex;
@@ -387,6 +388,29 @@ button:focus {
     font-weight: 700;
     text-transform: uppercase;
 }
+.item-price:nth-child(2){
+    width: 370px;
+    height: 455px;
+}
+.item-price:nth-child(2) .price-tag{
+    background-color: #4bcaff;
+}
+.item-price:nth-child(2) .price-description ul{
+    color: #4bcaff;
+}
+.item-price:nth-child(2) .btn-price{
+     background-color: #4bcaff;
+}
+.item-price:nth-child(2) >span{
+    color: #4bcaff;
+}
+.item-price:nth-child(3) .price-tag{
+    background-color: #fd7c00;
+}
+.item-price:nth-child(3) .btn-price{
+    background-color: #fd7c00;
+}
+/*Testimonials*/
 .testimonials {
     width: 100%;
     max-width: 100%;
