@@ -13,6 +13,12 @@ html body {
 body {
     width: 100%;
 }
+a:hover{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+}
 .container {
     width: 1230px;
     margin: 0 auto;
@@ -64,9 +70,13 @@ body {
 
 .main-menu a:hover {
     color: rgb(75, 202, 255);
+    border-top: 3px solid #4bcaff;
 }
 
 .home-first_screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 100vh;
     width: 100%;
     max-width: 100%;
@@ -77,20 +87,11 @@ body {
 }
 
 .home-content {
-    width: 1339px;
-    height: 336px;
-    margin: 0 auto;
-    padding: 349px 162px 115px 653px;
-}
-
-.home-content-text {
-    width: 665px;
-    height: 129px;
+    margin-left: 50%;
 }
 
 .home-content-text .context-head-usual {
-    width: 625px;
-    height: 45px;
+
     text-shadow: 0 1px 3px rgba(25, 22, 24, 0.36);
     color: #ffffff;
     font-size: 48px;
@@ -127,10 +128,11 @@ button:focus {
     margin-top: 40px;
 }
 
-.home-content .btn-download {
-    display: inline-block;
+.home-content-button .btn-download {
+    display: flex;
+    justify-content: center;
+    align-content: center;
     border: 2px solid #ffffff;
-    background-image: none;
     background-color: transparent;
     border-radius: 5px;
     color: #ffffff;
@@ -141,7 +143,7 @@ button:focus {
     text-decoration: none;
 }
 
-.home-content .btn-download span {
+.home-content-button .btn-download span {
     color: #ffffff;
     font-family: Lato, 'serif';
     font-size: 15px;
@@ -149,16 +151,26 @@ button:focus {
     text-transform: uppercase;
 }
 
-.home-content .btn-learn-more {
+.home-content-button .btn-learn-more {
     width: 196px;
-    height: 61px;
-    box-shadow: 0 4px 0 #277697;
-    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid #ffffff;
     border-radius: 5px;
-    background: url("../img/blueBase.png");
-}
+    color: #ffffff;
+    font-family: Lato, 'serif';
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
 
-.home-content .btn-learn-more span {
+}
+.home-content-button .btn-download:hover, .btn-learn-more:hover{
+    background-color: #4bcaff;
+}
+.home-content-button .btn-learn-more span {
     color: #fefefe;
     font-family: Lato, 'serif';
     font-size: 15px;
@@ -166,16 +178,10 @@ button:focus {
     text-transform: uppercase;
 }
 
-.container-link {
-    width: 1339px;
-    height: 55px;
-}
-
 .home-content-available {
     display: flex;
     margin-top: 49px;
-    width: 251px;
-    height: 53px;
+
 }
 
 .home-content-available span {
@@ -189,14 +195,23 @@ button:focus {
     font-weight: 300;
 }
 
-.apple-icon {
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 53px;
     height: 53px;
+    background-color: #030303;
+    opacity: 0.35;
+    border-radius: 50px;
+    margin: 0 7px;
 }
+.icon:hover{
+    background-color: #72b3cc;
+    opacity: 0.35;
+}
+.icon img{
 
-.android-icon {
-    width: 54px;
-    height: 53px;
 }
 .features {
     width: 100%;
@@ -210,11 +225,6 @@ button:focus {
     justify-content: space-between;
     height: 100%;
     align-items: center;
-}
-.img-features {
-    display: flex;
-    width: 170px;
-    height: 170px;
 }
 
 .head-tittle {
@@ -240,10 +250,12 @@ button:focus {
     margin-bottom: 30px;
 }
 
-.item-content {
+.item-content a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align:center;
-    width: 219px;
-    height: 316px;
 }
 
 .feature-title {
@@ -253,7 +265,20 @@ button:focus {
     font-weight: 700;
     text-transform: uppercase;
 }
-
+.feature-logo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 170px;
+    height: 170px;
+    background: #4bcaff;
+    border-radius: 100%;
+}
+.feature-logo:hover{
+    text-decoration: none;
+    background: #414042;
+}
 .feature-text {
     padding-top: 27px;
     display: flex;
@@ -378,6 +403,9 @@ button:focus {
     line-height: 40px;
 }
 .btn-price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 171px;
     height: 49px;
     background-color: #91c46b;
@@ -503,21 +531,37 @@ button:focus {
     align-items: center;
     width: 270px;
     height: 302px;
-    margin: 015px;
+    margin: 0 15px;
 
 }
-
+.item-image-active{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.item-image-active:hover{
+    border-radius: 10px;
+    background: #4bcaff;
+}
 .item-image {
     display: flex;
     align-items: center;
     flex-direction: column-reverse;
+    border-radius: 10px;
+}
+.btn-plus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 270px;
     height: 200px;
-    border-radius: 10px;
-    background: url("../img/image-show-gallery.png");
+    position: absolute;
+    z-index: -10;
 }
 
 .screenshot {
+    position: absolute;
+    z-index: 10;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -575,7 +619,9 @@ button:focus {
     justify-content: center;
     align-items: center;
 }
-
+.download-content a:hover{
+    border: 2px solid #ffffff;
+}
 .btn-download span {
     color: #414042;
     font-size: 15px;
@@ -680,7 +726,7 @@ button:focus {
     justify-content: space-between;
 }
 
-.footer-content span {
+.footer-content a {
     opacity: 0.25;
     color: #ffffff;
     font-family: Lato, 'serif';
