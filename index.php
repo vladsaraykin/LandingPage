@@ -272,29 +272,30 @@
 </div>
 
 <div class="contacts">
-    <div class="container">
         <div class="contact-form">
             <form action="#" method="post">
                 <span>Contact</span>
                 <div class="form-item">
-                    <input type="text" class="form-field" name="user_name" placeholder="Your Name">
+                    <input type="text" id="user_name" class="form-field" name="user_name" placeholder="Your Name">
                 </div>
 
                 <div class="form-item">
-                    <input type="email" class="form-field" name="user_email" placeholder="Your Email">
+                    <input type="email" id="user_email" class="form-field" name="user_email" placeholder="Your Email">
                 </div>
 
                 <div class="form-item">
-                    <input type="text" class="form-field" name="subject" placeholder="Subject">
+                    <input type="text" id="subject" class="form-field" name="subject" placeholder="Subject">
                 </div>
 
                 <div class="form-item message">
-                    <textarea class="form-field" rows="7" name="user_msg" placeholder="Message"></textarea>
+                    <textarea id="user_msg" class="form-field" rows="7" name="user_msg" placeholder="Message"></textarea>
                 </div>
 
                 <button type="submit" class="btn-send">Send</button>
             </form>
         </div>
+    <div class="map" id="map">
+
     </div>
 </div>
 <footer class="footer">
@@ -309,6 +310,6 @@
 <script src="assets/js/jquery-3.3.1.min.js"></script>
 <script src="assets/js/slick/slick.min.js"></script>
 <script src="assets/js/fancybox-master/dist/jquery.fancybox.min.js"></script>
-<script src="https://api-maps.yandex.ru/2.1/?apikey=<061532cc-4fb5-40d3-b665-8f2e14dd984e>&lang=ru_RU" type="text/javascript"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=28ba7932-0987-4417-915e-3850f6e06650&lang=ru_RU" type="text/javascript"></script>
 <script src="assets/js/scripts.js"></script>
 </html>
