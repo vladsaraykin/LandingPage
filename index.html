@@ -9,6 +9,7 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/js/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="assets/js/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/fancybox-master/dist/jquery.fancybox.min.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
@@ -31,8 +32,8 @@
     </div>
 </header>
 <div class="home-first_screen">
-    <div class="home-content">
-        <!--FIXME: Начало слайда -->
+    <div class="container home-content">
+        <div>
             <div class="home-content-text">
                 <span class="context-head-usual">Simple, Beautiful <span
                         class="context-head-highlighted">and Amazing</span></span>
@@ -50,7 +51,26 @@
                 <a href="#" class="icon"><img src="assets/img/apple.png"></a>
                 <a href="#" class="icon"><img src="assets/img/android.png"></a>
             </div>
-        <!--FIXME: конец слайда -->
+        </div>
+        <div>
+            <div class="home-content-text">
+                <span class="context-head-usual">Simple, Beautiful <span
+                        class="context-head-highlighted">and Amazing</span></span>
+                <span class="context-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget nunc vitae tellus luctus
+                        ullamcorper. Nam porttitor ullamcorper felis at convallis. Aenean ornare vestibulum nisi
+                        fringilla lacinia. Nullam pulvinar sollicitudin velit id laoreet. Quisque non rhoncus sem.</span>
+            </div>
+            <div class="home-content-button">
+                <a href="#" class="btn-download"><span>Download</span></a>
+                <a href="#" class="btn-learn-more"><span>Learn More</span></a>
+            </div>
+            <div class="home-content-available">
+                <span>Available on :</span>
+                <a href="#" class="icon"><img src="assets/img/apple.png"></a>
+                <a href="#" class="icon"><img src="assets/img/android.png"></a>
+            </div>
+        </div>
     </div>
 </div>
 <div class="features">
@@ -113,48 +133,36 @@
         <div class="items-of-gallery">
             <div class="row">
                 <div class="item col-md-3 col-sm-6 col-xs-12">
-                    <div class="item-image">
-                        <div class="item-image-active">
-                            <img src="assets/img/image-show-gallery.png">
-                            <div class="btn-plus"><img src="assets/img/plus.png" alt=""></div>
-                        </div>
+                    <a class="item-image" data-fancybox="gallery" href="assets/img/house-1.jpg">
+                        <img src="assets/img/house-1.jpg">
                         <span class="screenshot">SCREEN SHOT #1</span>
-                    </div>
+                    </a>
                     <span class="description">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</span>
                 </div>
             </div>
             <div class="item col-md-3 col-sm-6 col-xs-12">
-                <div class="item-image">
-                    <div href="#" class="item-image-active">
-                        <img src="assets/img/image-show-gallery.png">
-                    </div>
+                <a class="item-image" data-fancybox="gallery" href="assets/img/house-2.jpg">
+                        <img src="assets/img/house-2.jpg">
                     <span class="screenshot">SCREEN SHOT #2</span>
-                </div>
+                </a>
                 <span class="description">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</span>
             </div>
             <div class="item col-md-3 col-sm-6 col-xs-12">
-                <div class="item-image">
-                    <div class="item-image-active">
-                        <img src="assets/img/image-show-gallery.png">
-                        <a href="#"></a>
-                    </div>
+                <a class="item-image" data-fancybox="gallery" href="assets/img/house-3.jpg">
+                    <img src="assets/img/house-3.jpg">
                     <span class="screenshot">SCREEN SHOT #3</span>
-                </div>
-                <span class="description">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</span>
+                </a>
+                <span class="description" rel="group1">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</span>
             </div>
             <div class="item col-md-3 col-sm-6 col-xs-12">
-                <div class="item-image">
-                    <div class="item-image-active">
-                        <img src="assets/img/image-show-gallery.png">
-                        <a href="#"></a>
-                    </div>
+                <a class="item-image" data-fancybox="gallery" href="assets/img/house-4.jpg">
+                        <img src="assets/img/house-4.jpg">
                     <span class="screenshot">SCREEN SHOT #4</span>
-                </div>
+                </a>
                 <span class="description">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</span>
             </div>
         </div>
     </div>
-</div>
 </div>
 <div class="video">
     <div class="container video-box">
@@ -225,7 +233,7 @@
     <div class="container">
         <span class="testimonials-content-tittle">Testimonials</span>
         <div class="testimonials-quote">
-            <div>
+            <div class="testimonials-quote-slick">
                 <div class="testimonials-icon">
                     <img src="assets/img/testimonials-icon.png">
                 </div>
@@ -238,7 +246,7 @@
                 </span>
                 </div>
             </div>
-            <div>
+            <div class="testimonials-quote-slick">
                 <div class="testimonials-icon">
                     <img src="assets/img/testimonials-icon.png">
                 </div>
@@ -263,7 +271,7 @@
     </div>
 </div>
 
-<div class="map">
+<div class="contacts">
     <div class="container">
         <div class="contact-form">
             <form action="#" method="post">
@@ -300,5 +308,7 @@
 </body>
 <script src="assets/js/jquery-3.3.1.min.js"></script>
 <script src="assets/js/slick/slick.min.js"></script>
+<script src="assets/js/fancybox-master/dist/jquery.fancybox.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=<061532cc-4fb5-40d3-b665-8f2e14dd984e>&lang=ru_RU" type="text/javascript"></script>
 <script src="assets/js/scripts.js"></script>
 </html>
