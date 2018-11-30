@@ -706,7 +706,7 @@ button:focus {
 }
 .contact-form {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0 auto;
     width: 324px;
     height: 460px;

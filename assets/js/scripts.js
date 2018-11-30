@@ -11,18 +11,18 @@ $("form").on("submit", sendForm);
 
 function sendForm(e) {
     e.preventDefault();
-    var data = $("form").serialize();
+    var data = $("form").serializeArray();
     $.ajax({
         url: 'ajaxForm.php',
         type: 'POST',
         data: data,
         success: function (data) {
-            console.dir(data)
-            if(data.result == 'success'){
+            jsonData = JSON.parse(data);
+            if(jsonData.result == 'success'){
                 alert('форма корректно заполнена');
             } else {
-                for(var errorField in data.text_error){
-                    $('#'+errorField).html(data.text_error[errorField]);
+                for(var errorField in jsonData.text_error){
+                    $('#'+errorField).html(jsonData.text_error[errorField]);
                     $('#'+errorField).show(encodeURIComponent(errorField));
                     $('#'+errorField).addClass('error_input');
                 }
