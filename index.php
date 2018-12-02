@@ -15,7 +15,7 @@
 <body>
 <header class="site-header">
     <div class="container">
-        <a class="site-header__logo">
+        <a class="site-header__logo" href="index.php">
             <img src="assets/img/logo.png">
         </a>
         <nav class="site-header__menu main-menu">
@@ -32,45 +32,52 @@
     </div>
 </header>
 <div class="home-first_screen">
-    <div class="container home-content">
+    <div class="container">
         <div>
-            <div class="home-content-text">
-                <span class="context-head-usual">Simple, Beautiful <span
-                        class="context-head-highlighted">and Amazing</span></span>
-                <span class="context-description">
+            <div class="home-content">
+                <div>
+                    <div class="home-content-text">
+                    <span class="context-head-usual">Simple, Beautiful <span class="context-head-highlighted">and Amazing</span></span>
+                        <span class="context-description">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget nunc vitae tellus luctus
                         ullamcorper. Nam porttitor ullamcorper felis at convallis. Aenean ornare vestibulum nisi
                         fringilla lacinia. Nullam pulvinar sollicitudin velit id laoreet. Quisque non rhoncus sem.</span>
-            </div>
-            <div class="home-content-button">
-                <a href="#" class="btn-download"><span>Download</span></a>
-                <a href="#" class="btn-learn-more"><span>Learn More</span></a>
-            </div>
-            <div class="home-content-available">
-                <span>Available on :</span>
-                <a href="#" class="icon"><img src="assets/img/apple.png"></a>
-                <a href="#" class="icon"><img src="assets/img/android.png"></a>
+                    </div>
+                    <div class="home-content-button">
+                        <a href="#" class="btn-download"><span>Download</span></a>
+                        <a href="#" class="btn-learn-more"><span>Learn More</span></a>
+                    </div>
+                    <div class="home-content-available">
+                        <span>Available on :</span>
+                        <a href="#" class="icon"><img src="assets/img/apple.png"></a>
+                        <a href="#" class="icon"><img src="assets/img/android.png"></a>
+                    </div>
+                </div>
             </div>
         </div>
         <div>
-            <div class="home-content-text">
-                <span class="context-head-usual">Simple, Beautiful <span
-                        class="context-head-highlighted">and Amazing</span></span>
-                <span class="context-description">
+            <div class="home-content">
+                <div>
+                    <div class="home-content-text">
+                    <span class="context-head-usual">Simple, Beautiful <span class="context-head-highlighted">and Amazing</span></span>
+                        <span class="context-description">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget nunc vitae tellus luctus
                         ullamcorper. Nam porttitor ullamcorper felis at convallis. Aenean ornare vestibulum nisi
                         fringilla lacinia. Nullam pulvinar sollicitudin velit id laoreet. Quisque non rhoncus sem.</span>
-            </div>
-            <div class="home-content-button">
-                <a href="#" class="btn-download"><span>Download</span></a>
-                <a href="#" class="btn-learn-more"><span>Learn More</span></a>
-            </div>
-            <div class="home-content-available">
-                <span>Available on :</span>
-                <a href="#" class="icon"><img src="assets/img/apple.png"></a>
-                <a href="#" class="icon"><img src="assets/img/android.png"></a>
+                    </div>
+                    <div class="home-content-button">
+                        <a href="#" class="btn-download"><span>Download</span></a>
+                        <a href="#" class="btn-learn-more"><span>Learn More</span></a>
+                    </div>
+                    <div class="home-content-available">
+                        <span>Available on :</span>
+                        <a href="#" class="icon"><img src="assets/img/apple.png"></a>
+                        <a href="#" class="icon"><img src="assets/img/android.png"></a>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
 </div>
 <div class="features">
@@ -133,32 +140,36 @@
         <div class="items-of-gallery">
             <div class="row">
                 <div class="item col-md-3 col-sm-6 col-xs-12">
-                    <a class="item-image" data-fancybox="gallery" href="assets/img/house-1.jpg">
+                    <div class="item-image" data-fancybox="gallery" href="assets/img/house-1.jpg">
+                        <a class="btn-plus"><img src="assets/img/plus.png""></a>
                         <img src="assets/img/house-1.jpg">
                         <span class="screenshot">SCREEN SHOT #1</span>
-                    </a>
+                    </div>
                     <span class="description">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</span>
                 </div>
             </div>
             <div class="item col-md-3 col-sm-6 col-xs-12">
-                <a class="item-image" data-fancybox="gallery" href="assets/img/house-2.jpg">
-                        <img src="assets/img/house-2.jpg">
+                <div class="item-image" data-fancybox="gallery" href="assets/img/house-2.jpg">
+                    <a class="btn-plus"><img src="assets/img/plus.png""></a>
+                    <img src="assets/img/house-2.jpg">
                     <span class="screenshot">SCREEN SHOT #2</span>
-                </a>
+                </div>
                 <span class="description">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</span>
             </div>
             <div class="item col-md-3 col-sm-6 col-xs-12">
-                <a class="item-image" data-fancybox="gallery" href="assets/img/house-3.jpg">
+                <div class="item-image" data-fancybox="gallery" href="assets/img/house-3.jpg">
+                    <a class="btn-plus"><img src="assets/img/plus.png""></a>
                     <img src="assets/img/house-3.jpg">
                     <span class="screenshot">SCREEN SHOT #3</span>
-                </a>
+                </div>
                 <span class="description" rel="group1">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</span>
             </div>
             <div class="item col-md-3 col-sm-6 col-xs-12">
-                <a class="item-image" data-fancybox="gallery" href="assets/img/house-4.jpg">
-                        <img src="assets/img/house-4.jpg">
+                <div class="item-image" data-fancybox="gallery" href="assets/img/house-4.jpg">
+                    <a class="btn-plus"><img src="assets/img/plus.png""></a>
+                    <img src="assets/img/house-4.jpg">
                     <span class="screenshot">SCREEN SHOT #4</span>
-                </a>
+                </div>
                 <span class="description">Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.</span>
             </div>
         </div>
@@ -272,28 +283,32 @@
 </div>
 
 <div class="contacts">
-        <div class="contact-form">
-            <form action="#" method="post">
-                <span>Contact</span>
-                <div class="form-item">
-                    <input type="text" id="user_name" class="form-field" name="user_name" placeholder="Your Name">
-                </div>
+    <div class="form-success">Спасибо за предоставленные данные!</div>
+    <div class="contact-form">
+        <form action="#" method="post">
+            <span>Contact</span>
+            <div class="form-item">
+                <input type="text" class="form-field user_name" name="user_name" placeholder="Your Name">
+                <label class="user_name_error"></label>
+            </div>
 
-                <div class="form-item">
-                    <input type="email" id="user_email" class="form-field" name="user_email" placeholder="Your Email">
-                </div>
+            <div class="form-item">
+                <input type="email" class="form-field user_email" name="user_email" placeholder="Your Email">
+                <label class="user_email_error"></label>
+            </div>
 
-                <div class="form-item">
-                    <input type="text" id="subject" class="form-field" name="subject" placeholder="Subject">
-                </div>
+            <div class="form-item">
+                <input type="text" class="form-field phone" name="phone" placeholder="phone number">
+                <label class="phone_error"</label>
+            </div>
 
-                <div class="form-item message">
-                    <textarea id="user_msg" class="form-field" rows="7" name="user_msg" placeholder="Message"></textarea>
-                </div>
-
-                <button type="submit" class="btn-send">Send</button>
-            </form>
-        </div>
+            <div class="form-item message">
+                <textarea id="user_msg" class="form-field" rows="7" name="user_msg" placeholder="Message"></textarea>
+            </div>
+            <input type="hidden" id="date" name="datetime">
+            <button type="submit" class="btn-send">Send</button>
+        </form>
+    </div>
     <div class="map" id="map">
 
     </div>
@@ -310,6 +325,7 @@
 <script src="assets/js/jquery-3.3.1.min.js"></script>
 <script src="assets/js/slick/slick.min.js"></script>
 <script src="assets/js/fancybox-master/dist/jquery.fancybox.min.js"></script>
-<script src="https://api-maps.yandex.ru/2.1/?apikey=28ba7932-0987-4417-915e-3850f6e06650&lang=ru_RU" type="text/javascript"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=28ba7932-0987-4417-915e-3850f6e06650&lang=ru_RU"
+        type="text/javascript"></script>
 <script src="assets/js/scripts.js"></script>
 </html>

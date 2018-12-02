@@ -5,28 +5,32 @@ button.on("click", function (e) {
 });
 
 $(".testimonials-quote").slick({dots:true});
-$(".home-content").slick({dots:true});
+$(".home-first_screen .container").slick({dots:true});
 
 $("form").on("submit", sendForm);
-
+$(".user_name").on("click", GetDateTime);
 function sendForm(e) {
     e.preventDefault();
-    var data = $("form").serializeArray();
+    $('.form-item input').removeClass('error-input');
+    $('.form-item label').hide()
+    var data = $("form").serialize();
     $.ajax({
         url: 'ajaxForm.php',
         type: 'POST',
         data: data,
+        dataType: "json",
         success: function (data) {
-            jsonData = JSON.parse(data);
-            if(jsonData.result == 'success'){
-                alert('форма корректно заполнена');
+            if(data.result == 'success'){
+                $('form')[0].reset();
+                $('.contact-form').hide();
+                $('.form-success').css('display', 'flex');
+                $('.form-success').show();
             } else {
-                for(var errorField in jsonData.text_error){
-                    $('#'+errorField).html(jsonData.text_error[errorField]);
-                    $('#'+errorField).show(encodeURIComponent(errorField));
-                    $('#'+errorField).addClass('error_input');
+                for(var errorField in data.text_error){
+                     $('.'+ errorField+'_error').html(data.text_error[errorField]);
+                     $('.'+ errorField+'_error').show();
+                    $('.'+errorField).addClass('error_input');
                 }
-                return false;
             }
         }
     });
@@ -50,8 +54,8 @@ function init(){
     var myGeoObject = new ymaps.Placemark([[54.212286, 45.120280]]);
     myMap.geoObjects.add(myGeoObject);
 }
-function encode_utf8(s) {
 
-    return unescape(encodeURIComponent(s));
-
+function GetDateTime() {
+    var currentdate = new Date().getTime() / 1000;
+    document.getElementById('date').value=currentdate;
 }
