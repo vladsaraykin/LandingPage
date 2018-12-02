@@ -88,20 +88,22 @@ a:visited{
 
 .home-content {
     max-width: 100%;
-
-}
-.home-content .slick-dots{
     display: flex;
+    justify-content: flex-end;
+}
+.home-first_screen .slick-dots{
+    display: flex;
+    justify-content: center;
     list-style: none;
     font-size: 0;
 }
-.home-content .slick-dots li.slick-active button {
+.home-first_screen .slick-dots li.slick-active button {
     width: 14px;
     height: 14px;
     border: 1px solid #4bcaff;
     background-color: #4bcaff;
 }
-.home-content .slick-dots li button {
+.home-first_screen .slick-dots li button {
     width: 10px;
     height: 11px;
     border: 1px solid #ffffff;
@@ -109,10 +111,10 @@ a:visited{
     cursor: pointer;
     color: transparent;
 }
-.home-content .slick-dots li button:before{
+.home-first_screen .slick-dots li button:before{
     content: '';
 }
-.home-content .slick-prev{
+.home-first_screen .slick-prev{
     left: -55px;
     width: 55px;
     height: 55px;
@@ -120,7 +122,7 @@ a:visited{
     background-color: #4bcaff;
     opacity: 0.2;
 }
-.home-content .slick-next{
+.home-first_screen .slick-next{
     right: -55px;
     width: 55px;
     height: 55px;
@@ -128,7 +130,7 @@ a:visited{
     background-color: #4bcaff;
     opacity: 0.2;
 }
-.home-content .slick-next:hover, .slick-prev:hover{
+.home-first_screen .slick-next:hover, .slick-prev:hover{
     opacity: 1.0;
 }
 .slick-next:before{
@@ -245,18 +247,14 @@ button:focus {
     align-items: center;
     width: 53px;
     height: 53px;
-    background-color: #030303;
-    opacity: 0.35;
+    background-color: rgba(3, 3, 3, 0.35);
     border-radius: 50px;
     margin: 0 7px;
 }
 .icon:hover{
-    background-color: #72b3cc;
-    opacity: 0.35;
+    background-color: rgb(114, 179, 204);
 }
-.icon img{
 
-}
 .features {
     width: 100%;
     max-width: 100%;
@@ -498,7 +496,8 @@ button:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 100%;
+    width: 520px;
+    height: 158px;
     margin-top: 42px;
 }
 
@@ -509,8 +508,14 @@ button:focus {
     font-size: 36px;
     font-weight: 400;
 }
+.testimonials-icon{
+    float: left;
+    height: 100%;
+    max-height: 100%;
+}
 .testimonials-quote__content {
     margin-left: 39px;
+    margin-top: 32px;
     color: #4bcaff;
     font-size: 14px;
     line-height: 18px;
@@ -581,44 +586,40 @@ button:focus {
     margin: 0 15px;
 
 }
-.item-image-active{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
 
-.item-image-active:hover{
-    border-radius: 10px;
-    background: #4bcaff;
-}
 .item-image {
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
-    flex-direction: column-reverse;
+    justify-content: center;
+    background: rgb(75, 202, 255);
     border-radius: 10px;
+    z-index: 3;
+
 }
 .item-image img{
     height: 100%;
     width: 100%;
     padding: 0;
     border-radius: 0 0 10px 10px;
+    position: relative;
+    z-index: 5;
 }
+.item-image img:hover{
+    opacity: 0.45;
+    z-index: 1;
+}
+.btn-plus{
+    position: absolute;
+    z-index: 2;
+    background-image: url("../img/plus.png");
+}
+
 .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{
     padding-right: 0;
     padding-left: 0;
 }
-.btn-plus{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 270px;
-    height: 200px;
-    position: absolute;
-    z-index: -10;
-}
-
 .screenshot {
     position: absolute;
     z-index: 10;
@@ -635,6 +636,7 @@ button:focus {
     font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
+    align-self: flex-end;
 }
 
 .description {
@@ -645,7 +647,7 @@ button:focus {
     font-weight: 400;
     line-height: 22px;
 }
-
+/*download*/
 .download {
     width: 100%;
     max-width: 100%;
@@ -690,6 +692,9 @@ button:focus {
 }
 
 .contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     height: 100vh;
     width: 100%;
@@ -708,8 +713,9 @@ button:focus {
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    padding-bottom: 10px;
     width: 324px;
-    height: 460px;
+    height: 500px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15), 0 0 0 rgba(0, 0, 0, 0.1);
     background-color: #4bcaff;
     opacity: 0.8;
@@ -720,7 +726,7 @@ button:focus {
 .contact-form form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -735,11 +741,11 @@ button:focus {
 
 .form-item {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 270px;
     height: 34px;
     box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.06);
-    background-color: #ffffff;
     margin: 7px;
     border-radius: 10px;
 }
@@ -747,12 +753,12 @@ button:focus {
 .form-field {
     width: 100%;
     text-align: center;
-    color: #d3d3d3;
     font-family: "Arial MT", serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 38.4px;
     border: 0;
+    border-radius: 10px;
 }
 
 .message {
@@ -774,6 +780,21 @@ button:focus {
     font-size: 15px;
     font-weight: 700;
 }
+.form-success{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 2;
+    width: 35%;
+    height: 20%;
+    text-align: center;
+    background: #d1b55a;
+    font-family: Lato, 'serif';
+    font-size: 18px;
+    font-weight: 300;
+}
 
 .footer {
     width: 100%;
@@ -793,13 +814,14 @@ button:focus {
 }
 
 .footer-content a {
-    opacity: 0.25;
-    color: #ffffff;
+    color: rgba(255, 255, 255, 0.25);
     font-family: Lato, 'serif';
     font-size: 12px;
     font-weight: 400;
 }
-
+.footer-content a:hover {
+    color: rgba(255, 255, 255, 1);
+}
 .upper-case {
     text-transform: uppercase;
 }
