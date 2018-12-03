@@ -11,8 +11,6 @@ $("form").on("submit", sendForm);
 $(".user_name").on("click", GetDateTime);
 function sendForm(e) {
     e.preventDefault();
-    $('.form-item input').removeClass('error-input');
-    $('.form-item label').hide()
     var data = $("form").serialize();
     $.ajax({
         url: 'ajaxForm.php',
@@ -26,6 +24,8 @@ function sendForm(e) {
                 $('.form-success').css('display', 'flex');
                 $('.form-success').show();
             } else {
+                $('input').removeClass('error_input');
+                $('label').hide()
                 for(var errorField in data.text_error){
                      $('.'+ errorField+'_error').html(data.text_error[errorField]);
                      $('.'+ errorField+'_error').show();

@@ -1,7 +1,11 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
+include_once 'config.php';
 
 $error_container = array();
+
+$url =  $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
 $user_name = $_POST['user_name'];
 checkValue($user_name, 'user_name');
 
@@ -10,23 +14,23 @@ checkValue($user_email, 'user_email');
 
 $msg = $_POST['user_msg'];
 
-$subject = $_POST['phone'];
-checkValue($subject, 'phone');
+$phone = $_POST['phone'];
+checkValue($phone, 'phone');
 
-$start_date_time = $_POST['datetime'];
+$start_date_time=$_POST['datetime'];
+$start_date_time = new DateTime(date('Y/m/d H:i:s', $start_date_time));;
 
-$finish_date_time = date('Y/m/d H:i:s', time());
+$finish_date_time = new DateTime(date('Y/m/d H:i:s', microtime(time())));
 
+$difference_date = $start_date_time->diff($finish_date_time);
+$difference_date = $difference_date->s .'( seconds)';
 if (empty($error_container)) {
-    //if (mail($user_email, "Вам пришло письмо с сайта $url",
-//    "Имя поситителя: $user_name
-//    \n Предмет: $subject
-//    \n Сообщение $msg
-//    \n Время начала заполнения анкеты: $start_date_time
-//    \n Время отправки сообщения на сервере: $finish_date_time")) {
-//} else {
-//    $error_container['error'] = 'Пиьсмо не отправлено, специалисты свяжутся с вами';
-//}
+
+    $dsn = "mysql:host=$host;dbname=$db_name;";
+    $pdo = new PDO($dsn, $username, $password);
+    $stmt_insert = $pdo->prepare('INSERT INTO messages (user_name, user_email, phone, msg, start_date_time, finish_date_time, difference_date) VALUES  (?, ?, ?, ?, ?, ?, ?)');
+    $stmt_insert->execute(array($user_name, $user_email, $phone, $msg, $start_date_time->format('Y/m/d H:i:s'), $finish_date_time->format('Y/m/d H:i:s'), $difference_date));
+
     echo json_encode(array('result' => 'success'));
 } else {
     echo json_encode(array('result' => 'error', 'text_error' => $error_container));
