@@ -18,32 +18,46 @@
 include_once 'config.php';
 $dsn = "mysql:host=$host;dbname=$db_name;";
 $pdo = new PDO($dsn, $username, $password);
-$stmt_insert = $pdo->prepare('INSERT INTO messages (user_name, user_email, phone, msg, start_date_time, finish_date_time, difference_date) VALUES  (?, ?, ?, ?, ?, ?, ?)');
-$stmt_insert->execute(array($user_name, $user_email, $phone, $msg, $start_date_time->format('Y/m/d H:i:s'), $finish_date_time->format('Y/m/d H:i:s'), $difference_date));
+$header = $pdo->query('SELECT name_block, content FROM pages ORDER BY number_in_list')->fetchAll(PDO::FETCH_UNIQUE);
 
-include_once 'assets/pages/header.php';
-if ( $_GET['page'] == 'features' ) {
-    include_once 'assets/pages/features.php';
+//include_once 'assets/pages/header.php';
+echo $header['header'][0];
 
+if ( $_GET['page'] == 'home' ) {
+//    include_once 'assets/pages/features.php';
+    echo $header['home'][0];
+}else if ( $_GET['page'] == 'features' ) {
+//    include_once 'assets/pages/features.php';
+    echo $header['features'][0];
 } else if ( $_GET['page'] == 'gallery' ) {
-    include_once 'assets/pages/gallery.php';
-
+//    include_once 'assets/pages/gallery.php';
+    echo $header['gallery'][0];
 } else if ( $_GET['page'] == 'video' ) {
-    include_once 'assets/pages/video.php';
-
+//    include_once 'assets/pages/video.php';
+    echo $header['video'][0];
 } else if ( $_GET['page'] == 'prices' ) {
-    include_once 'assets/pages/prices.php';
-
+//    include_once 'assets/pages/prices.php';
+    echo $header['prices'][0];
 } else if ( $_GET['page'] == 'testimonials' ) {
-    include_once 'assets/pages/testimonials.php';
-
+//    include_once 'assets/pages/testimonials.php';
+    echo $header['testimonials'][0];
 } else if ( $_GET['page'] == 'download' ) {
-    include_once 'assets/pages/download.php';
-    include_once 'assets/pages/contact.php';
+//    include_once 'assets/pages/download.php';
+    echo $header['download'][0];
+} else if ( $_GET['page'] == 'contacts' ) {
+//    include_once 'assets/pages/contact.php';
+    echo $header['contacts'][0];
 } else{
-    include_once 'assets/pages/home.php';
+//    include_once 'assets/pages/home.php';
+    foreach ($header as $key => $item){
+        if($key == 'header' || $key == 'footer'){
+            continue;
+        }
+        echo $item[0];
+    }
 }
-include_once 'assets/pages/footer.php';
+//include_once 'assets/pages/footer.php';
+echo $header['footer'][0];
 ?>
 </body>
 <script src="assets/js/jquery-3.3.1.min.js"></script>

@@ -1,6 +1,5 @@
 <?php
 echo '
-
 <div class="video">
     <div class="container video-box">
         <div class="btn-play-video">

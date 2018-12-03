@@ -14,6 +14,7 @@ echo '
                 <li><a href="index.php?page=prices">Prices</a></li>
                 <li><a href="index.php?page=testimonials">Testimonials</a></li>
                 <li><a href="index.php?page=download">Download</a></li>
+                <li><a href="index.php?page=contacts">Contacts</a></li>
             </ul>
         </nav>
     </div>
